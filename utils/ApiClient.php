@@ -88,7 +88,7 @@
           'base_url' => $this->base_url,  // Base Url
           'format' => "json"              // Response Format
       ]);
-      $result = $api->execute($uri. $id .'/' , 'GET', [], [  // Request
+      $result = $api->execute($uri . '/' . $id .'/' , 'GET', [], [  // Request
           "X-DreamFactory-API-Key"=>$this->api_key
       ]);
 
@@ -113,7 +113,7 @@
           'base_url' => $this->base_url,  // Base Url
           'format' => "json",                                   // Response Format
       ]);
-      $result = $api->execute($uri.'/' , 'GET', [], [  // Request
+      $result = $api->execute($uri . '//', 'GET', [], [  // Request
         'X-HTTP-Method-Override' => 'GET',
         'Content-Type' => 'application/json',
         "X-DreamFactory-API-Key"=>$this->api_key
@@ -140,7 +140,7 @@
     $api = new RestClient([
         'base_url' => $this->base_url,  // Base Url
     ]);
-    $result = $api->execute($uri.'?filter='.$filter, 'GET', [], [  // Request
+    $result = $api->execute($uri.'/?filter='.$filter, 'GET', [], [  // Request
       'X-HTTP-Method-Override' => 'GET',
       'Content-Type' => 'application/json',
       "X-DreamFactory-API-Key"=>$this->api_key
@@ -170,7 +170,7 @@
         'base_url' => $this->base_url,  // Base Url
     ]);
 
-    $result = $api->execute( $uri.'?', 'POST' , json_encode($body, true) , [  // Request
+    $result = $api->execute( $uri .'/?', 'POST' , json_encode($body, true) , [  // Request
           'X-HTTP-Method-Override' => 'POST',
           'Content-Type' => 'application/json',
           "X-DreamFactory-API-Key"=>$this->api_key
@@ -206,7 +206,7 @@
         'base_url' => $this->base_url,  // Base Url
     ]);
 
-    $result = $api->execute( $uri.$id, 'DELETE' , json_encode($body, true) , [  // Request
+    $result = $api->execute( $uri . '/' .$id, 'DELETE' , json_encode($body, true) , [  // Request
           'X-HTTP-Method-Override' => 'DELETE',
           'Content-Type' => 'application/json',
           "X-DreamFactory-API-Key"=>$this->api_key
@@ -231,7 +231,7 @@
         'base_url' => $this->base_url,  // Base Url
     ]);
 
-    $result = $api->execute( $uri, 'PATCH' , json_encode($body, true) , [
+    $result = $api->execute( $uri . '/', 'PATCH' , json_encode($body, true) , [
           'X-HTTP-Method-Override' => 'PATCH',
           'Content-Type' => 'application/json',
           'X-DreamFactory-API-Key'=>$this->api_key
